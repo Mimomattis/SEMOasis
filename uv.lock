@@ -2645,6 +2645,15 @@ wheels = [
 ]
 
 [[package]]
+name = "nomad-catalysis"
+version = "1.0.6.dev4+g690e50f98"
+source = { git = "https://github.com/FAIRmat-NFDI/nomad-catalysis-plugin.git?rev=main#690e50f98bbf2dd0aea3f63ea06abee76967d169" }
+dependencies = [
+    { name = "nomad-lab", extra = ["infrastructure"] },
+    { name = "openpyxl" },
+]
+
+[[package]]
 name = "nomad-distribution"
 source = { editable = "." }
 dependencies = [
@@ -2659,12 +2668,14 @@ jupyter = [
     { name = "jupyter-events" },
 ]
 plugins = [
+    { name = "nomad-catalysis" },
     { name = "nomad-north-jupyter" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "jupyter-events", marker = "extra == 'jupyter'" },
+    { name = "nomad-catalysis", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-catalysis-plugin.git?rev=main" },
     { name = "nomad-lab", extras = ["dev", "infrastructure"], marker = "extra == 'dev'", specifier = "==1.4.2" },
     { name = "nomad-lab", extras = ["infrastructure"], specifier = "==1.4.2" },
     { name = "nomad-north-jupyter", marker = "extra == 'plugins'", specifier = ">=0.2.5" },
