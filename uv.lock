@@ -1075,6 +1075,39 @@ wheels = [
 ]
 
 [[package]]
+name = "fairmat-readers-transmission"
+version = "0.0.2"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "numpy", version = "2.2.6", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "numpy", version = "2.3.5", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "pandas", version = "2.3.3", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "pandas", version = "3.0.2", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "pint", version = "0.24.4", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "pint", version = "0.25.3", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/17/71/5fd70ceb6fa7991e683a19ee60dedbb73348365d97e69c68e8c0481eacbc/fairmat_readers_transmission-0.0.2.tar.gz", hash = "sha256:9038c2402e91984ecd79c53b5adca1bf981b7b62be3405d6830dc84166fc2ea2", size = 46920, upload-time = "2024-10-10T14:39:27.776Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5b/95/0e87572ea39a8e04aafa41b856f8ab089b7a7d5bd3e8fec2bef32bf1b058/fairmat_readers_transmission-0.0.2-py3-none-any.whl", hash = "sha256:bce6eba9a0160afa1f21dc46d12cc1b5754ea0c9db66732bea84992d3ecde9e4", size = 16647, upload-time = "2024-10-10T14:39:26.142Z" },
+]
+
+[[package]]
+name = "fairmat-readers-xrd"
+version = "0.0.8"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "numpy", version = "2.2.6", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "numpy", version = "2.3.5", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "pint", version = "0.24.4", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "pint", version = "0.25.3", source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "xmltodict" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f6/9f/6c8ecbac08b98821fd5e7c71fed480d19ac2769107f4d23211d4c22b9637/fairmat_readers_xrd-0.0.8.tar.gz", hash = "sha256:cd4f996e6eca6677b91f2864cc1c5a2704025721d72bd92475e990898a07f105", size = 6900676, upload-time = "2026-01-05T11:53:41.27Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2f/85/690b40bf3fc342db5d55cee799405b5baad4047c48f34d4e0d0500de2419/fairmat_readers_xrd-0.0.8-py3-none-any.whl", hash = "sha256:19d8d7333cf248846515a005dd687e0cbd33b6d604c42cd7ca6cf365d39b6aa8", size = 28721, upload-time = "2026-01-05T11:53:40.089Z" },
+]
+
+[[package]]
 name = "fastapi"
 version = "0.135.3"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -2669,6 +2702,8 @@ jupyter = [
 ]
 plugins = [
     { name = "nomad-catalysis" },
+    { name = "nomad-material-processing" },
+    { name = "nomad-measurements" },
     { name = "nomad-north-jupyter" },
 ]
 
@@ -2678,6 +2713,8 @@ requires-dist = [
     { name = "nomad-catalysis", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-catalysis-plugin.git?rev=main" },
     { name = "nomad-lab", extras = ["dev", "infrastructure"], marker = "extra == 'dev'", specifier = "==1.4.2" },
     { name = "nomad-lab", extras = ["infrastructure"], specifier = "==1.4.2" },
+    { name = "nomad-material-processing", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=a0508a2ec3c38d61276795b7809c2f94862e0398" },
+    { name = "nomad-measurements", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-measurements.git?rev=b57bdd183445e7f7fb63729bf4c68070b136c11d" },
     { name = "nomad-north-jupyter", marker = "extra == 'plugins'", specifier = ">=0.2.5" },
 ]
 provides-extras = ["plugins", "jupyter", "gpu-action", "cpu-action", "dev"]
@@ -2778,6 +2815,24 @@ infrastructure = [
     { name = "uvicorn", extra = ["standard"] },
     { name = "validators" },
     { name = "zipstream-ng" },
+]
+
+[[package]]
+name = "nomad-material-processing"
+version = "1.0.6"
+source = { git = "https://github.com/FAIRmat-NFDI/nomad-material-processing.git?rev=a0508a2ec3c38d61276795b7809c2f94862e0398#a0508a2ec3c38d61276795b7809c2f94862e0398" }
+dependencies = [
+    { name = "nomad-lab" },
+]
+
+[[package]]
+name = "nomad-measurements"
+version = "1.3.5"
+source = { git = "https://github.com/FAIRmat-NFDI/nomad-measurements.git?rev=b57bdd183445e7f7fb63729bf4c68070b136c11d#b57bdd183445e7f7fb63729bf4c68070b136c11d" }
+dependencies = [
+    { name = "fairmat-readers-transmission" },
+    { name = "fairmat-readers-xrd" },
+    { name = "nomad-lab" },
 ]
 
 [[package]]
@@ -5586,6 +5641,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/0f/03/e3353b72e518574b32993989d8f696277bf878e9d508c7dd22e86c0dab5b/xarray-2026.2.0.tar.gz", hash = "sha256:978b6acb018770554f8fd964af4eb02f9bcc165d4085dbb7326190d92aa74bcf", size = 3111388, upload-time = "2026-02-13T22:20:50.18Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/99/92/545eb2ca17fc0e05456728d7e4378bfee48d66433ae3b7e71948e46826fb/xarray-2026.2.0-py3-none-any.whl", hash = "sha256:e927d7d716ea71dea78a13417970850a640447d8dd2ceeb65c5687f6373837c9", size = 1405358, upload-time = "2026-02-13T22:20:47.847Z" },
+]
+
+[[package]]
+name = "xmltodict"
+version = "0.13.0"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/39/0d/40df5be1e684bbaecdb9d1e0e40d5d482465de6b00cbb92b84ee5d243c7f/xmltodict-0.13.0.tar.gz", hash = "sha256:341595a488e3e01a85a9d8911d8912fd922ede5fecc4dce437eb4b6c8d037e56", size = 33813, upload-time = "2022-05-08T07:00:04.916Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/94/db/fd0326e331726f07ff7f40675cd86aa804bfd2e5016c727fa761c934990e/xmltodict-0.13.0-py2.py3-none-any.whl", hash = "sha256:aa89e8fd76320154a40d19a0df04a4695fb9dc5ba977cbb68ab3e4eb225e7852", size = 9971, upload-time = "2022-05-08T07:00:02.898Z" },
 ]
 
 [[package]]
