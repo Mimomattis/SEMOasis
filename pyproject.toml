@@ -29,6 +29,8 @@ repository = "https://github.com/mimomattis/semoasis"
 # Add your plugins to the list below.
 plugins = [
  "nomad-catalysis @ git+https://github.com/FAIRmat-NFDI/nomad-catalysis-plugin.git@main",
+ "nomad-measurements @ git+https://github.com/FAIRmat-NFDI/nomad-measurements.git@b57bdd183445e7f7fb63729bf4c68070b136c11d",
+ "nomad-material-processing @ git+https://github.com/FAIRmat-NFDI/nomad-material-processing.git@a0508a2ec3c38d61276795b7809c2f94862e0398",
  "nomad-north-jupyter>=0.2.5"
 ]
 jupyter = ["jupyter-events"]
